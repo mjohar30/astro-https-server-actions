@@ -10,7 +10,7 @@
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "astro build --remote && wrangler deploy"
+    "deploy": "astro build --remote && echo _worker.js > dist/.assetsignore && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -21,5 +21,8 @@
     "@astrojs/sitemap": "^3.1.6",
     "astro": "^4.10.3",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "wrangler": "^4.98.0"
   }
 }
