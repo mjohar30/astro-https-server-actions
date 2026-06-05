@@ -9,7 +9,8 @@
     "build": "astro build --remote",
     "check": "astro check",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build --remote && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
