@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import cloudflare from '@astrojs/cloudflare';
 import db from '@astrojs/db';
+import vue from '@astrojs/vue';
+
 import { SitemapStream } from 'sitemap';
 import { createWriteStream } from 'node:fs';
 import { mkdir } from 'node:fs/promises';
@@ -66,7 +68,7 @@ function sitemapPlugin() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemapPlugin(), db()],
+  integrations: [mdx(), sitemapPlugin(), db(), vue()],
   output: "hybrid",
   adapter: cloudflare()
 });
