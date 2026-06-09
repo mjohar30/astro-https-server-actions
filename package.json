@@ -6,11 +6,12 @@
     "dev": "astro dev",
     "dev:remote": "astro dev --remote",
     "start": "astro dev",
-    "build": "astro build --remote",
+    "build": "npm run db:push && astro build --remote",
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "astro build --remote && echo _worker.js > dist/.assetsignore && wrangler deploy"
+    "deploy": "astro build --remote && echo _worker.js > dist/.assetsignore && wrangler deploy",
+    "db:push": "astro db push --remote"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
